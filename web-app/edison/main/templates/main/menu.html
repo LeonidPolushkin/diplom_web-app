@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    Меню
+{% endblock %}
+
+{% block other_css %}
+    <link rel="stylesheet" href="{% static 'main/css/menu.css' %}">
+{% endblock %}
+
+{% block content %} <!-- обращаемся к блоку content -->
+    <div id="menu_items">
+        <div class="menu_item">
+            <img src="{% static 'main/img/menu.jpg' %}">
+            <a href="/media/Меню.pdf" target="_blank">Меню</a>
+        </div>
+        <div class="menu_item">
+            <img src="{% static 'main/img/bar.png' %}">
+            <a href="/media/Бар.pdf" target="_blank">Барное меню</a>
+        </div>
+    </div>
+
+{% endblock %}

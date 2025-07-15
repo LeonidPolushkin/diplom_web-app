@@ -1,0 +1,19 @@
+th a {
+    color: inherit;
+    text-decoration: none;
+}
+
+th.sortable:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+th.sorted-asc::after {
+    content: " ▲";
+    font-size: 0.8em;
+}
+
+th.sorted-desc::after {
+    content: " ▼";
+    font-size: 0.8em;
+}

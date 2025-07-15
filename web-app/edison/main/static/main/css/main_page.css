@@ -1,0 +1,66 @@
+#starter {
+    width: 100%;
+    margin-bottom: 45px;
+}
+
+.pic_center {
+    display: flex;
+    justify-content: center;
+}
+
+#slogan {
+    font-size: 45px;
+}
+
+hr {
+    margin: 50px 50px;
+	padding: 0;
+	border: none;
+	border-top: 3px solid #bfbfbf;
+}
+
+#interior_pic {
+    width: 1000px;
+    border-radius: 22px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    font-size: 22px;
+    margin: 50px 120px 30px 120px;
+}
+
+.link_btn > a {
+    font-size: 18px;
+    display: inline-block;
+    background-color: #1e1c1a;
+    border: 1px solid #cd7f32;
+    color: #cd7f32;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    font-weight: bold;
+}
+
+.link_btn > a:hover {
+    color: #e2c008;
+    border: 1px solid #e2c008;
+    box-shadow: 0 0 10px #e2c008;
+}
+
+.link_btn > a:focus {
+    color: #e2c008;
+    border: 1px solid #e2c008;
+    box-shadow: 0 0 10px #e2c008;
+}
+
+#kitchen_pic {
+    width: 700px;
+    border-radius: 22px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#menu_btn {
+    margin-bottom: 50px;
+}
+

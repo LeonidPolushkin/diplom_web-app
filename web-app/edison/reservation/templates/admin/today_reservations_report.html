@@ -1,0 +1,54 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="{% static 'reservation/css/today_reservations_report.css' %}">
+{% endblock %}
+
+{% block title %}Отчёт о резервированиях{% endblock %}
+
+{% block content %}
+    <h1>Резервирования на {{ today }}</h1>
+
+    {% if reservations %}
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>ID</th>
+                <th>Клиент</th>
+
+                {# Время #}
+                <th class="sortable {% if sort_by == 'reservation_time' %}sorted-{{ order }}{% endif %}">
+                    <a href="?sort=reservation_time&order={% if sort_by == 'reservation_time' and order == 'asc' %}desc{% else %}asc{% endif %}">Время</a>
+                </th>
+
+                {# Номер стола #}
+                <th class="sortable {% if sort_by == 'table_number' %}sorted-{{ order }}{% endif %}">
+                    <a href="?sort=table_number&order={% if sort_by == 'table_number' and order == 'asc' %}desc{% else %}asc{% endif %}">Номер стола</a>
+                </th>
+
+                <th>Кол-во гостей</th>
+
+                {# Статус #}
+                <th class="sortable {% if sort_by == 'status' %}sorted-{{ order }}{% endif %}">
+                    <a href="?sort=status&order={% if sort_by == 'status' and order == 'asc' %}desc{% else %}asc{% endif %}">Статус</a>
+                </th>
+
+                <th>Комментарии персонала</th>
+            </tr>
+
+            {% for r in reservations %}
+                <tr>
+                    <td>{{ r.reservation_number }}</td>
+                    <td>{{ r.customer.name }}</td>
+                    <td>{{ r.reservation_time }}</td>
+                    <td>{{ r.table_number|default_if_none:"-" }}</td>
+                    <td>{{ r.customer_count }}</td>
+                    <td>{{ r.status }}</td>
+                    <td>{{ r.customer.staff_comment|default_if_none:"-" }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>На сегодня нет резервирований.</p>
+    {% endif %}
+{% endblock %}

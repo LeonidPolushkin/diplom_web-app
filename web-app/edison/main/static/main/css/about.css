@@ -1,0 +1,68 @@
+h1 {
+    font-family: 'PT Serif', serif;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.wrapper {
+    text-align: left;
+    padding: 45px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper img {
+    max-width: 600px;
+    border-radius: 22px;
+    float: left;
+    margin-right: 35px;
+}
+
+.pic1 {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.pic2 {
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.list {
+    clear: both;
+    margin-top: 100px;
+}
+
+.list span {
+    font-family: 'PT Serif', serif;
+    color: #deb11d;
+}
+
+.list img {
+    max-width: 600px;
+    border-radius: 22px;
+    float: right;
+    margin-left: 35px;
+
+}
+
+.list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.list li {
+    font-size: 18px;
+    padding: 12px 0;
+    position: relative;
+    padding-left: 40px; /* Отступ для иконки */
+    line-height: 1.6;
+}
+
+.list i {
+    font-size: 20px; /* Размер иконки */
+    margin-right: 15px;
+}
+
+.ending {
+    clear: both;
+    margin-top: 150px;
+}

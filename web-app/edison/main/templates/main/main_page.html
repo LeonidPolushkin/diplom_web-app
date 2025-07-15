@@ -1,0 +1,40 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    Главная страница
+{% endblock %}
+
+{% block other_css %}
+    <link rel="stylesheet" href="{% static 'main/css/main_page.css' %}">
+{% endblock %}
+
+{% block content %}
+    <img id="starter" src="{% static 'main/img/main_page.jpg' %}">
+    <div id="wrapper_main">
+        <span id="slogan">«Где вкус — это изобретение»</span><br>
+        <hr>
+
+        <div class="pic_center">
+            <img id="interior_pic" src="{% static 'main/img/main_page2.jpg' %}">
+        </div>
+        <div class="content">
+            <span>Гастропаб «Эдисон» — это стилизованное под стимпанк заведение, где приглушенный свет, темная мебель и антуражный декор создают идеальную атмосферу для отдыха и общения</span> <br>
+        </div>
+        <div class="link_btn">
+            <a href="{% url 'about' %}">Подробнее про заведение</a>
+        </div>
+        <hr>
+
+        <div class="pic_center">
+            <img id="kitchen_pic" src="{% static 'main/img/main_page3.jpg' %}">
+        </div>
+        <div class="content">
+            <span>Кухня гастропаба сочетает смелые авторские идеи с традициями европейской и южнорусской гастрономии: здесь вы найдёте фьюжн-блюда с локальным акцентом, оригинальные соусы, крафтовую подачу и богатый выбор напитков — от крафтового пива до фирменных коктейлей</span><br>
+        </div>
+        <div id="menu_btn" class="link_btn">
+            <a href="{% url 'menu' %}">Узнать наше меню</a>
+        </div>
+    </div>
+
+{% endblock %}

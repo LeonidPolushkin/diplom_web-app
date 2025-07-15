@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    Бронирование
+{% endblock %}
+
+{% block other_css %}
+    <link rel="stylesheet" href="{% static 'success_page/css/success_page.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div id="success">
+        <h2> Заявка на бронирование отправлена! <i class="fa-solid fa-circle-check big-icon"></i> </h2>
+    </div>
+{% endblock %}

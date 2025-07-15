@@ -1,0 +1,12 @@
+{% extends "admin/index.html" %}
+
+{% block sidebar %}
+  {{ block.super }}
+
+  <div class="dashboard-module">
+    <h2>Отчёты</h2>
+    <ul>
+      <li><a href="{% url 'today_reservations_report' %}">Резервирования на сегодня</a></li>
+    </ul>
+  </div>
+{% endblock %}

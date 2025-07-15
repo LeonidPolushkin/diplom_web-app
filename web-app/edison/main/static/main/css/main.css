@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: #1e1b18;
+    color: #cd7f32;
+    font-family: 'PT Serif', serif;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+ /* хедер */
+header {
+    float: left;
+    background: linear-gradient(90deg, #2e2a27, #3a312b);
+    width: 100%;
+    border-bottom: 3px solid #9b9b9b;
+    font-family: "PT Serif", serif;
+}
+
+#logo>a>img {
+    width: 160px;
+    height: 160px;
+    border-radius: 15%;
+    float: left;
+    padding: 0.5%;
+}
+
+#header_list>ul {
+    list-style: none;
+    display: flex;
+    font-size: 35px;
+    justify-content: space-around;  /* Равномерное распределение */
+    align-items: center;
+    padding: 40px;
+}
+ /* ссылки */
+a {
+    color: #cd7f32;
+    text-decoration: none;
+    transition: all.2s ease;
+}
+
+a:hover {
+    color: #e2c008;
+    text-decoration: none;
+    transform: scale(1.05);
+    transition: all.2s ease;
+}
+
+a:focus {
+    color: #e2c008;
+    text-decoration: none;
+    transform: scale(1.05);
+    transition: all.2s ease;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#header_content {
+    flex: 1 0 auto;
+}
+/* футер */
+footer {
+    background: linear-gradient(90deg, #2e2a27, #3a312b);
+    width: 100%;
+    border-top: 3px solid #9b9b9b;
+    font-family: "PT Serif", serif;
+    padding: 10px 15px;
+    height: 100px;
+}
+
+#footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer_list {
+    margin-left: 35px;
+}
+
+#footer_list > ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    font-size: 18px;
+    padding: 0;
+}
+
+#socials {
+    margin-right: 15px;
+}
+
+#socials > ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-size: 30px;
+    padding: 0;
+}
+
+#rights {
+    color: #734c2b;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+main {
+    text-align: center;
+    flex: 120;
+}
