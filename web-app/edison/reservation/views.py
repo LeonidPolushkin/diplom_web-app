@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Customers, Reservations
 from django.http import JsonResponse
 from rest_framework import viewsets
+from django_filters.rest_framework import DjangoFilterBackend
 from .serializers import CustomersSerializer, ReservationsSerializer
 
 def reservation(request):
@@ -62,10 +63,17 @@ def get_reserved_times(request):
 
     return JsonResponse({'reserved_times': reserved_times})
 
+# REST API
 class CustomersViewSet(viewsets.ModelViewSet):
     queryset = Customers.objects.all()
     serializer_class = CustomersSerializer
+    # фильтры
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['name', 'phone', 'email']  # фильтруем по этим полям
 
 class ReservationsViewSet(viewsets.ModelViewSet):
     queryset = Reservations.objects.all()
     serializer_class = ReservationsSerializer
+    # фильтры
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['reservation_date', 'reservation_time', 'status', 'customer']
