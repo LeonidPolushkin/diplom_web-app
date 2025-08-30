@@ -8,4 +8,5 @@ urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
     path('', include('main.urls')),
     path('reservation/', include('reservation.urls')),
+    path('', include('reservation.urls')),  # <-- подключаем твое приложение
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

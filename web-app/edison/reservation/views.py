@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import Customers, Reservations
 from django.http import JsonResponse
-
+from rest_framework import viewsets
+from .serializers import CustomersSerializer, ReservationsSerializer
 
 def reservation(request):
     if request.method == 'POST':
@@ -60,3 +61,11 @@ def get_reserved_times(request):
     reserved_times = [time for time, count in time_counts.items() if count >= total_tables]
 
     return JsonResponse({'reserved_times': reserved_times})
+
+class CustomersViewSet(viewsets.ModelViewSet):
+    queryset = Customers.objects.all()
+    serializer_class = CustomersSerializer
+
+class ReservationsViewSet(viewsets.ModelViewSet):
+    queryset = Reservations.objects.all()
+    serializer_class = ReservationsSerializer
