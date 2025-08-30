@@ -67,13 +67,13 @@ def get_reserved_times(request):
 class CustomersViewSet(viewsets.ModelViewSet):
     queryset = Customers.objects.all()
     serializer_class = CustomersSerializer
-    # фильтры
+    # Фильтры
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['name', 'phone', 'email']  # фильтруем по этим полям
 
 class ReservationsViewSet(viewsets.ModelViewSet):
     queryset = Reservations.objects.all()
     serializer_class = ReservationsSerializer
-    # фильтры
+    # Фильтры
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['reservation_date', 'reservation_time', 'status', 'customer']
